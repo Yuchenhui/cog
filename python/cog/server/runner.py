@@ -231,8 +231,8 @@ class PredictionEventHandler:
 
     def append_logs(self, logs: str) -> None:
         assert self.p.logs is not None
-        self.p.logs += logs
-        self._send_webhook(schema.WebhookEvent.LOGS)
+        # self.p.logs += logs
+        # self._send_webhook(schema.WebhookEvent.LOGS)
 
     def succeeded(self) -> None:
         log.info("prediction succeeded")

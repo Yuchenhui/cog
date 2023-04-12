@@ -37,12 +37,12 @@ class PredictionRequest(PredictionBaseModel):
     created_at: t.Optional[datetime]
 
     # TODO: deprecate this
-    output_file_prefix: t.Optional[str]
+    # output_file_prefix: t.Optional[str]
 
-    webhook: t.Optional[pydantic.AnyHttpUrl]
-    webhook_events_filter: t.Optional[
-        t.Set[WebhookEvent]
-    ] = WebhookEvent.default_events()
+    # webhook: t.Optional[pydantic.AnyHttpUrl]
+    # webhook_events_filter: t.Optional[
+    #     t.Set[WebhookEvent]
+    # ] = WebhookEvent.default_events()
 
     @classmethod
     def with_types(cls, input_type: t.Type) -> t.Any:
@@ -64,7 +64,7 @@ class PredictionResponse(PredictionBaseModel):
     started_at: t.Optional[datetime]
     completed_at: t.Optional[datetime]
 
-    logs: str = ""
+    # logs: str = ""
     error: t.Optional[str]
     status: t.Optional[Status]
 
